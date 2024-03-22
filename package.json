@@ -1,0 +1,54 @@
+{
+  "name": "magniipsum",
+  "version": "1.0.0",
+  "description": "NodeJS library to interact with a HCL Domino compatible REST API",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "engines": {
+    "node": ">18.0.0"
+  },
+  "files": [
+    "dist/**/*"
+  ],
+  "scripts": {
+    "dev": "ts-node-dev --respawn --pretty --transpile-only src/index.ts",
+    "build": "tsc",
+    "prepublish": "npm run build && npm run test",
+    "start": "node .",
+    "test": "nyc --reporter=html --reporter=text mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MathiasTorp/magniipsum.git"
+  },
+  "keywords": [
+    "domino",
+    "nam",
+    "magnam"
+  ],
+  "author": "BernitaMoen",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/MathiasTorp/magniipsum.git/issues"
+  },
+  "homepage": "https://github.com/MathiasTorp/magniipsum.git",
+  "devDependencies": {
+    "@types/chai": "^4.3.5",
+    "@types/chai-as-promised": "^7.1.5",
+    "@types/jsonwebtoken": "^9.0.2",
+    "@types/mocha": "^10.0.1",
+    "@types/node": "^20.4.5",
+    "@types/sinon": "^10.0.15",
+    "chai": "^4.3.7",
+    "chai-as-promised": "^7.1.1",
+    "mocha": "^10.2.0",
+    "nyc": "^15.1.0",
+    "sinon": "^15.2.0",
+    "ts-node": "^10.9.1",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.1.6"
+  },
+  "dependencies": {
+    "jsonwebtoken": "^9.0.1"
+  }
+}
